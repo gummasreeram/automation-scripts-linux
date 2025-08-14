@@ -1,4 +1,4 @@
-FROM alphine:latest
+FROM alpine:latest
 
 ENV TOMCAT_VERSION=10.1.44 \
     CATALINA_HOME=/opt/tomcat 
