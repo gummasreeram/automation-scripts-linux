@@ -1,5 +1,5 @@
 FROM ubuntu:noble-20250714
-RUN  apt update -y
+RUN  apt update -y 
 RUN  apt install openjdk-21-jre -y
 RUN mkdir /opt/tomcat
 WORKDIR /opt/tomcat
