@@ -2,6 +2,7 @@ FROM alphine:latest
 
 ENV TOMCAT_VERSION=10.1.44 \
     CATALINA_HOME=/opt/tomcat 
+RUN apk update 
 
 RUN apk add --no cache openjdk21-jdk wget    
 
