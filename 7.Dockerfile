@@ -1,10 +1,10 @@
 FROM alpine:latest 
 ENV CATALINA_HOME=/opt/tomcat  
 RUN apk update 
-RUN apk add --no-cache openjdk21-jdk tar 
+RUN apk add --no-cache openjdk21-jdk wget tar 
 RUN mkdir -p $CATALINA_HOME 
 WORKDIR $CATALINA_HOME  
-ADD https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.44/bin/apache-tomcat-10.1.44.tar.gz . 
+RUN wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.44/bin/apache-tomcat-10.1.44.tar.gz . 
 RUN tar -xzvf apache-tomcat-10.1.44.tar.gz && \ 
     mv apache-tomcat-10.1.44/* $CATALINA_HOME 
 EXPOSE 8080 
